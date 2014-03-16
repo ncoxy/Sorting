@@ -46,13 +46,15 @@ public class Sorting{
 		int min = 0;
 		for (int i=1; i<test1.length; i++) {
 			min = i;
-			for (int x=1-1; x>=0; x--) {
+			for (int x=i-1; x>=0; x--) {
 				if (test1[i] < test1[x]) {
 					int holder = test1[x];
 					test1[x] = test1[i];
 					test1[i] = holder;
+
 				}
 				i--;
+
 			}
 			i = min;
 		}
